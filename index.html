@@ -1,59 +1,61 @@
 <html>
-<body onload="go()">
-<script>
-if(document.cookie.indexOf('kex=0') >= 0)
-    document.location.href = '../index.html';
-</script>
-<script>
-function print(){}
-
-var scriptCode = '';
-
-function preloadScripts(lst)
+<style>
+.bg 
 {
-    for(var i = 0; i < lst.length; i++)
-    {
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', lst[i], false);
-        xhr.send('');
-        scriptCode += xhr.responseText + '\n';
-    }
+	background-color:white;
+	background-image:url(bg1.png);
+	background-attachment: fixed;
+	background-size:100%;
+	background-repeat:no-repeat;
+	font-family: system-ui;
+	text-align:center;
 }
-
-function done()
-{
-    if(main_ret == 0 || main_ret == 179)
-    {
-        alert("You're all set!");
-        read_ptr_at(0);
-    }
-    else
-        alert("Jailbreak failed! Reboot your PS4 and try again.");
+.button:focus, .button::-moz-focus-inner{
+  outline:none;
+  border:none;
 }
-
-window.midExploit = function()
-{
-        preloadScripts(['750.js', 'jb.js', 'preloader.js', 'restore75X.js', 'loader.js'], go);
+.button{
+  font-family: arial;
+  font-size:16px;
+  text-transform: uppercase;
+  font-weight:700;
+  border:2px solid #404040;
+  border-radius: 4px;
+  padding:10px;
+  cursor: pointer;
+  display:inline-block;
+  text-decoration: none;
+  background:transparent;
+  color:#d4d7d8;
+  box-shadow:0 5px 0 #878787;
 }
+.button:hover{
+  font-size:22px;
+  background:#242424;
+  border:2px solid #ffffff;
+  box-shadow:0 5px 0 #cccccc;
+  color:white;
+}
+.button:active{
+  background:#ee596f;
+  position:relative;
+  color:black;
+  top:5px;
+  box-shadow:none;
+}
+</style>
+<head>
+	<title>PS4MACEDO 7.55 USB</title>
+</head>
+<body class="bg">
+<br>
+<h1 style='font-size:26px;text-align:center;'><font color="#6089f6">PROCEDIMENTO PARA INSTALAÇÃO DO <font color="#ee596f">HOST 7.5xl NO GUIA DO USUÁRIO</font></font></h1>
+<hr width="75%" size="1" color="#ff5757"><br><br>
+<h1 style='font-size:22px;text-align:center;'><font color="#6089f6"><font color="#ee596f">1.</font> Baixe o arquivo <font color="#ee596f">ApplicationCache.db</font> no link a seguir, e coloque na <font color="#ee596f">raiz de um pendrive</font>, e conecte na <font color="#ee596f">porta 0</font> do PS4.</font></h1>
+<h1 style='font-size:24px;text-align:center;'><font color="#ee596f">Link</font> <a href="https://github.com/ps4macedo/usb755/raw/main/ApplicationCache.db">https://github.com/ps4macedo/usb755/raw/main/ApplicationCache.db</a></h1><br>
+<h1 style='font-size:22px;text-align:center;'><font color="#6089f6"><font color="#ee596f">2.</font> Faça a <font color="#ee596f">limpeza da cache</font>, e retorne a está página.</font></h1><br>
+<h1 style='font-size:22px;text-align:center;'><font color="#6089f6"><font color="#ee596f">3.</font> Agora <font color="#ee596f">clique no botão a baixo</font> e aguarde a instalação do <font color="#ee596f">host 75x light no guia do usuário</font>.</font></h1>
+<a href="https://ps4macedo.github.io/usb755/usb755.html" class="button"><font color="#FFF">USB CACHE</font></a>
 
-window.postExploit = function()
-{
-    document.cookie = 'kex=0';
-    setTimeout(function() //update the screen one last time...
-    {
-        eval.call(window, scriptCode);
-        done();
-    }, 100);
-};
-</script>
-<script src="utils.js"></script>
-<script src="int64.js"></script>
-<script src="ps4.js"></script>
-<button id="input1" onfocus="handle2()"></button>
-<button id="input2"></button>
-<button id="input3" onfocus="handle2()"></button>
-<select id="select1">
-<option value="value1">Value1</option>
-</select>
 </body>
 </html>
