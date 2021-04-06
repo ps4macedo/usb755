@@ -1,8 +1,13 @@
 <html>
+<style>
+body{text-align:center;overflow:hidden;background-color:#000000;background-attachment:fixed;
+background-size:100%;background-repeat:no-repeat;color:#ee596f;font-size:26px;}
+button{border:2px solid #ffffff; border-radius:4px; padding:8px; background:transparent;}
+</style><br>
 <body onload="go()">
 <script>
 if(document.cookie.indexOf('kex=0') >= 0)
-    document.location.href = '../index.html';
+    document.location.replace("index.html#retorno=true");
 </script>
 <script>
 function print(){}
@@ -24,11 +29,11 @@ function done()
 {
     if(main_ret == 0 || main_ret == 179)
     {
-        alert("You're all set!");
+        alert("\n \n P R O N T O ! Tudo ocorreu com SUCESSO.\n \n A T E N Ç Ã O ! ! ! Aguarde a(s) mensagen(s).\n  Depois clique em \"OK\" e novamente em \"OK\" na próxima tela (memória insuficiente).");
         read_ptr_at(0);
     }
     else
-        alert("Jailbreak failed! Reboot your PS4 and try again.");
+        alert("Jailbreak FALHOU! Reinicie o PS4 sem sair dessa tela, usando o botão \"PS\" \n e tente novamente..");
 }
 
 window.midExploit = function()
